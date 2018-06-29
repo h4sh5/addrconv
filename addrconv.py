@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 '''
 A python3 script to generate memory addresses based on hex input
+
+author: Haoxi Tan
+email: haoxi.tan@gmail.com
 '''
 
 import sys
@@ -52,10 +55,13 @@ if __name__ == "__main__":
     example:
     {0} 0xdeadbeef
     {0} -l 0x12345678
+
+    author: Haoxi Tan
+    email: haoxi.tan@gmail.com
     """.format(sys.argv[0]))
 
 
-    if len(sys.argv) <= 1:
+    if len(sys.argv) <= 1 or sys.argv[1] == "-h" or sys.argv[1] == "--help":
         print(usage)
 
     elif sys.argv[1] == "-l":
